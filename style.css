@@ -1,0 +1,476 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #17181a;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+main {
+  position: absolute;
+}
+
+#logo {
+  color: white;
+  font-family: "Abril Fatface";
+  font-weight: 500;
+}
+.nav-header {
+  min-height: 8vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0rem;
+  z-index: 2;
+  position: relative;
+}
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: white;
+  pointer-events: none;
+}
+
+.slide {
+  min-height: 100vh;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: #17181a;
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative;
+}
+
+.hero-img {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-span {
+  color: #00d58f;
+}
+.mountain-span {
+  color: rgb(86, 124, 228);
+}
+.hike-span {
+  color: rgb(167, 110, 231);
+}
+.hero-desc h2 {
+  font-family: "Abril Fatface";
+  font-size: 4rem;
+}
+.hero-desc p {
+  align-self: start; /*suspect*/
+  padding: 2rem 0rem;
+  font-size: 1.2rem;
+  color: rgb(223, 223, 223);
+}
+.explore {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+}
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+.nav-links a {
+  color: black;
+  font-style: normal;
+  text-decoration: none;
+}
+.burger {
+  cursor: pointer;
+}
+.nav-links {
+  font-size: 4rem;
+  flex-basis: 30rem;
+}
+.contact {
+  flex-basis: 30rem;
+}
+.nav-links h3 {
+  padding: 2rem 0rem;
+}
+.contact h2 {
+  font-size: 4rem;
+  padding: 2rem 0rem;
+}
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  background: #17181a;
+  top: -20%;
+  left: 0;
+}
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 75%, 75%;
+}
+.cursor.nav-active {
+  background: transparent;
+  transform: scale(3);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+.cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.5rem;
+  transform: translate(-50%, -50%);
+}
+.cursor.explore-active {
+  color: white;
+  transform: scale(3);
+}
+.title-swipe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+.title {
+  position: relative;
+  overflow: hidden;
+}
+.t-swipe1 {
+  background: rgb(86, 124, 228);
+}
+.t-swipe2 {
+  background: #00d58f;
+}
+.t-swipe3 {
+  background: rgb(167, 110, 231);
+}
+body.hide {
+  overflow: hidden;
+}
+
+/* Projects Page Styling */
+.fashion1,
+.fashion2,
+.fashion3,
+.fashion4 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.fashion-img {
+  height: 70vh;
+  flex-basis: 30rem;
+}
+.fashion-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+}
+.fashion-img img {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+
+.fashion-text h1 {
+  font-size: 5rem;
+  padding: 3rem 0rem;
+}
+
+.fashion1 h1 {
+  color: RGB(3, 169, 245);
+}
+.fashion2 h1 {
+  color: rgb(167, 110, 231);
+}
+.fashion3 h1 {
+  color: #cf385b;
+}
+.fashion4 h1 {
+  color: #ff9800;
+}
+
+.fashion-text p {
+  font-size: 1.5rem;
+  padding: 1rem 2rem 0rem 0rem;
+  margin-bottom: 2rem;
+}
+.playGithubDiv {
+  padding-top: 0.2rem;
+}
+.playGithubDiv a {
+  padding-right: 1.2rem;
+}
+.fashion-nr {
+  font-size: 15rem;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  color: white;
+  opacity: 0.1;
+}
+
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+/* slide animation while page transition*/
+.swipe1 {
+  background: rgb(167, 110, 231);
+  z-index: 5;
+}
+.swipe2 {
+  background: rgb(86, 124, 228);
+  z-index: 4;
+}
+.swipe3 {
+  background: #00d58f;
+  z-index: 3;
+}
+
+@media screen and (max-width: 1500px) {
+  .html {
+    overflow-y: hidden;
+  }
+  .nav-links {
+    height: 50vh;
+    width: 50vh;
+    padding: 0;
+  }
+  .nav-links div h3 {
+    font-size: 2rem;
+  }
+  .contact {
+    height: 50vh;
+    width: 50vh;
+  }
+  .contact h2 {
+    font-size: 1rem;
+  }
+
+  .hero-img {
+    height: 50vh;
+    object-fit: cover;
+  }
+  .hero-desc p {
+    align-self: center;
+  }
+  .svgIllustration {
+    height: 50vh;
+    width: 50vh;
+  }
+  .fashion-text h1 {
+    font-size: 2rem;
+    padding: 1rem 0rem;
+  }
+  .fashion-text p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .fashion-img img {
+    height: 50vh;
+    object-position: top;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .html {
+    overflow-y: hidden;
+  }
+  .nav-bar {
+    display: inline;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav-links {
+    height: 50vh;
+    width: 50vh;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-bottom: 0rem;
+  }
+  .nav-links div h3 {
+    font-size: 2rem;
+  }
+  .contact {
+    margin-top: 0rem;
+    height: 50vh;
+    width: 50vh;
+  }
+  .contact h2 {
+    margin-left: 3rem;
+    font-size: 2rem;
+  }
+  .contact p {
+    margin-left: 3rem;
+    font-size: 1rem;
+  }
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-desc {
+    padding: 0;
+  }
+  .hero-img {
+    padding-top: 4rem;
+  }
+  .hero-desc h2 {
+    font-size: 1.6rem;
+    padding: 1rem 0rem;
+  }
+  .hero-desc p {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  .explore {
+    width: 60%;
+    margin: auto;
+  }
+  .detail-slide {
+    width: 100%;
+    text-align: center;
+  }
+  .fashion-text p {
+    margin-bottom: 5rem;
+    padding: 0;
+  }
+  .fastion-text h1 {
+    margin: 2rem 0rem;
+  }
+}
+@media screen and (max-width: 411px) {
+  .reveal-img,
+  .reveal-text {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background: #17181a;
+    top: -20%;
+    left: 0;
+  }
+  .reveal-text {
+    top: 5%;
+    height: 100%;
+  }
+}
+/* project page mobile responsivenes*/
+@media screen and (max-width: 1024px) {
+  .fashion-nr {
+    display: none;
+  }
+  .fashion1,
+  .fashion2,
+  .fashion3,
+  .fashion4 {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    color: white;
+    flex-wrap: wrap-reverse;
+    position: relative;
+  }
+  .fashion1 detail-slide {
+    margin-bottom: 2rem;
+  }
+  .fashion-img img {
+    height: 40vh;
+  }
+  .fashion-img {
+    height: 40vh;
+    flex-basis: 30rem;
+  }
+  .fashion-text p {
+    margin-bottom: 1rem;
+  }
+}
